@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Teller</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+    <section>
+        <div class="centerDiv">
+        <h1> Emoji teller!!!</h1>
+        <div class="details">
+            <label> Enter your name </label><br>
+            <input type="text" id="nameid">
+        </div>
+
+        <div class="imgDiv">
+            <img src="welcome.avif" height="200" width="200" id="imgChange">
+        </div>
+
+        
+        <button> SEE RESULTS!!</button>
+</div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+        
+$('button').click(function()
+{
+const name = $('#nameid').val();
+$('#imgChange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+
+});
+</script>
+</body>
+</html>
